@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - CopyHistory</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
+            margin-top: 0;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+        .contact-section {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .contact-info {
+            margin: 10px 0;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+        li {
+            margin: 8px 0;
+        }
+        .faq-item {
+            margin: 20px 0;
+        }
+        .faq-question {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+        .faq-answer {
+            color: #555;
+            margin-left: 20px;
+        }
+        .warning {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .info {
+            background-color: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #777;
+            font-size: 0.9em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CopyHistory 技术支持</h1>
+        
+        <p>欢迎使用 CopyHistory！如果您遇到任何问题或有任何建议，我们很乐意帮助您。</p>
+
+        <div class="contact-section">
+            <h2>📧 联系方式</h2>
+            <div class="contact-info">
+                <strong>报告问题或建议功能：</strong><br>
+                请通过以下方式联系我们：
+                <ul>
+                    <li><strong>GitHub Issues</strong>：<a href="https://github.com/YOUR_USERNAME/CopyHistory/issues" target="_blank">提交问题或建议</a></li>
+                    <li><strong>邮箱</strong>：huag9998@gmail.com</li>
+                </ul>
+            </div>
+            
+            <div class="info">
+                <strong>提示：</strong> 在提交问题前，请先查看下面的常见问题解答，可能已经包含了您需要的答案。
+            </div>
+        </div>
+
+        <h2>❓ 常见问题</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: 应用需要哪些权限？</div>
+            <div class="faq-answer">
+                A: CopyHistory 需要以下权限：
+                <ul>
+                    <li><strong>辅助功能权限</strong>：用于自动粘贴功能。您可以在"系统设置 → 隐私与安全性 → 辅助功能"中授权。如果未授权，应用仍可使用，但需要手动粘贴。</li>
+                    <li><strong>剪贴板访问</strong>：自动获得，用于监控和存储剪贴板历史。</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: 如何使用快捷键打开历史记录？</div>
+            <div class="faq-answer">
+                A: 默认快捷键是 <code>⌥V</code>（Command + V）。您可以在应用的"偏好设置"中自定义快捷键。
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: 如何固定常用项目？</div>
+            <div class="faq-answer">
+                A: 在历史记录窗口中，选择要固定的项目，然后按 <code>⌘P</code> 即可固定。固定后的项目会显示在列表顶部，最多支持 21 个固定项。
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: 数据存储在哪里？</div>
+            <div class="faq-answer">
+                A: 所有数据仅存储在您的 Mac 本地：
+                <ul>
+                    <li>剪贴板历史：<code>~/Library/Application Support/CopyHistory/</code></li>
+                    <li>应用偏好设置：<code>~/Library/Preferences/com.huagx.copyhistory.plist</code></li>
+                </ul>
+                所有数据都不会上传到任何服务器。
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: 如何清除历史记录？</div>
+            <div class="faq-answer">
+                A: 在应用菜单中，选择"清除"即可清除未固定的项目。按住 <code>⇧</code> 键点击"清除"，可以清除所有项目（包括固定的）。
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: 应用支持哪些内容类型？</div>
+            <div class="faq-answer">
+                A: CopyHistory 支持：
+                <ul>
+                    <li>文本</li>
+                    <li>图片</li>
+                    <li>文件</li>
+                    <li>其他剪贴板支持的类型</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: 如何搜索历史记录？</div>
+            <div class="faq-answer">
+                A: 打开历史记录窗口后，直接开始输入即可搜索。支持实时搜索和正则表达式搜索。
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: 应用会收集我的数据吗？</div>
+            <div class="faq-answer">
+                A: <strong>不会</strong>。CopyHistory 完全尊重您的隐私：
+                <ul>
+                    <li>所有数据仅存储在本地设备</li>
+                    <li>不会上传任何数据到服务器</li>
+                    <li>不会收集任何用户信息</li>
+                    <li>不会使用任何分析或追踪服务</li>
+                </ul>
+                详细内容请查看 <a href="privacy.html">隐私政策</a>。
+            </div>
+        </div>
+
+        <h2>🐛 报告问题</h2>
+
+        <p>在报告问题前，请提供以下信息，这将帮助我们更快地解决问题：</p>
+
+        <ol>
+            <li><strong>问题描述</strong>：详细描述遇到的问题</li>
+            <li><strong>复现步骤</strong>：如何重现这个问题</li>
+            <li><strong>预期行为</strong>：您期望的正常行为是什么</li>
+            <li><strong>实际行为</strong>：实际发生了什么</li>
+            <li><strong>系统信息</strong>：
+                <ul>
+                    <li>macOS 版本</li>
+                    <li>CopyHistory 版本（在"关于"中查看）</li>
+                </ul>
+            </li>
+            <li><strong>截图或日志</strong>：如果有，请附上相关截图或错误日志</li>
+        </ol>
+
+        <div class="warning">
+            <strong>注意：</strong> 在提交包含敏感信息的问题前，请确保已移除所有个人数据（如密码、个人文件等）。
+        </div>
+
+        <h2>💡 功能建议</h2>
+
+        <p>我们欢迎任何功能建议！请在提交建议时说明：</p>
+        <ul>
+            <li>您希望添加什么功能</li>
+            <li>为什么需要这个功能</li>
+            <li>您希望它如何工作</li>
+        </ul>
+
+        <h2>📖 使用文档</h2>
+
+        <ul>
+            <li><a href="privacy.html">隐私政策</a></li>
+            <li>应用内帮助：打开应用后，按 <code>⌘,</code> 打开偏好设置查看各种选项说明</li>
+        </ul>
+
+        <div class="footer">
+            <p>CopyHistory - 剪贴板历史管理器</p>
+            <p>CopyHistory is a fork of <a href="https://github.com/p0deje/Maccy">Maccy</a> by Alex Rodionov.</p>
+            <p>最后更新：2025年12月30日</p>
+        </div>
+    </div>
+</body>
+</html>
+
