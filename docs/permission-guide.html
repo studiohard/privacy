@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Permission Guide - CopyHistory</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
+            margin-top: 0;
+            text-align: center;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            border-left: 4px solid #3498db;
+            padding-left: 12px;
+        }
+        .step {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+        .step-number {
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            background-color: #3498db;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 28px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .step-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .step-content {
+            margin-top: 15px;
+            margin-left: 38px;
+        }
+        .note {
+            background-color: #e8f4fd;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .warning {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 6px;
+            margin-top: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border: 1px solid #eee;
+        }
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #888;
+            font-size: 0.9em;
+        }
+        .btn-back {
+            display: inline-block;
+            margin-top: 20px;
+            color: #3498db;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>How to Enable Accessibility Permission</h1>
+        
+        <p>CopyHistory needs Accessibility permission to paste content directly into other apps. macOS requires you to manually grant this permission for security reasons.</p>
+        
+        <div class="note">
+            <strong>Why is this needed?</strong><br>
+            Without this permission, CopyHistory cannot simulate the <code>Cmd+V</code> keystroke to paste items. You would have to manually paste items yourself.
+        </div>
+
+        <div class="step">
+            <div>
+                <span class="step-number">1</span>
+                <span class="step-title">Open System Settings</span>
+            </div>
+            <div class="step-content">
+                <p>The app should have opened the <strong>Privacy & Security</strong> settings page for you. If not, please open <strong>System Settings</strong> manually.</p>
+                <p>Navigate to: <strong>Privacy & Security</strong> > <strong>Accessibility</strong>.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div>
+                <span class="step-number">2</span>
+                <span class="step-title">Unlock Settings</span>
+            </div>
+            <div class="step-content">
+                <p>If the settings are locked, you might need to enter your password or use Touch ID to make changes.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div>
+                <span class="step-number">3</span>
+                <span class="step-title">Add CopyHistory</span>
+            </div>
+            <div class="step-content">
+                <p>There are two ways to add CopyHistory:</p>
+                
+                <h3>Method A: Drag and Drop (Recommended)</h3>
+                <p>Drag the <strong>CopyHistory</strong> icon from the guide window directly into the Accessibility list in System Settings, as shown below:</p>
+                <img src="images/step-drag.png" alt="Drag CopyHistory icon into Accessibility list">
+                
+                <h3>Method B: Manual Addition</h3>
+                <ol>
+                    <li>Click the <strong>+</strong> button at the bottom of the list.</li>
+                    <li>Navigate to your <strong>Applications</strong> folder.</li>
+                    <li>Select <strong>CopyHistory</strong> and click <strong>Open</strong>.</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="step">
+            <div>
+                <span class="step-number">4</span>
+                <span class="step-title">Enable the Switch</span>
+            </div>
+            <div class="step-content">
+                <p>Make sure the toggle switch next to <strong>CopyHistory</strong> is turned <strong>ON</strong> (blue). Once done, it should look like this:</p>
+                <img src="images/step-finish.png" alt="CopyHistory enabled in Accessibility list">
+                <div class="warning">
+                    <strong>Already in the list?</strong><br>
+                    If CopyHistory is already in the list but not working:
+                    <ol>
+                        <li>Select it and click the <strong>-</strong> button to remove it.</li>
+                        <li>Add it again using the steps above.</li>
+                    </ol>
+                    This resets the permission which sometimes gets stuck after app updates.
+                </div>
+            </div>
+        </div>
+
+        <p style="text-align: center; margin-top: 40px;">
+            Once enabled, CopyHistory will automatically detect the permission and the guide window will close.
+        </p>
+
+        <div class="footer">
+            <p>CopyHistory Support</p>
+        </div>
+    </div>
+</body>
+</html>
+
