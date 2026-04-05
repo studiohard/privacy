@@ -54,7 +54,7 @@
 <body>
     <h1>CopyHistory Privacy Policy</h1>
 
-    <p><strong>Last Updated: February 8, 2026</strong></p>
+    <p><strong>Last Updated: March 22, 2026</strong></p>
 
     <h2>Overview</h2>
     <p>CopyHistory is a clipboard history manager for macOS. It stores and manages your clipboard history entirely on your local device. This privacy policy explains how CopyHistory handles your information.</p>
@@ -64,17 +64,18 @@
 
     <h3>What Is Stored Locally</h3>
     <ul>
-        <li><strong>Clipboard History</strong>: All copied items (text, images, files) are stored locally on your Mac.</li>
-        <li><strong>Application Preferences</strong>: Your settings and configurations are stored locally using macOS UserDefaults.</li>
-        <li><strong>Pinned Items</strong>: Items you pin are stored in the same local database.</li>
+        <li><strong>Clipboard History</strong>: Copied items (text, images, files, and other pasteboard types the app records) are stored locally on your Mac.</li>
+        <li><strong>Application Preferences</strong>: Settings and keyboard shortcuts are stored locally (UserDefaults and related app storage).</li>
+        <li><strong>Pins, Favorites, Notes, and Lists</strong>: Pin assignments, starred favorites, per-item notes, and custom list/filter metadata are stored in the same local database as your history.</li>
     </ul>
 
     <h3>Data Storage Locations</h3>
-    <p>All data is stored locally on your device at:</p>
+    <p>Released builds of CopyHistory have <strong>App Sandbox enabled by default</strong>. The app only writes inside its sandbox container. <code>~</code> means your home folder; you can copy these paths and paste them into Finder → Go → Go to Folder (⇧⌘G) or Terminal.</p>
     <ul>
-        <li><code>~/Library/Application Support/CopyHistory/</code></li>
-        <li><code>~/Library/Preferences/com.huagx.copyhistory.plist</code></li>
+        <li><strong>History database (SwiftData)</strong>: <code>~/Library/Containers/com.huagx.copyhistory/Data/Library/Application Support/CopyHistory/</code> — contains <code>Storage.sqlite</code> and related SQLite files.</li>
+        <li><strong>Preferences</strong>: <code>~/Library/Containers/com.huagx.copyhistory/Data/Library/Preferences/</code> — includes <code>com.huagx.copyhistory.plist</code> and other preference data for the app.</li>
     </ul>
+    <p>Rare non-sandboxed developer builds may use <code>~/Library/Application Support/CopyHistory/</code> and <code>~/Library/Preferences/com.huagx.copyhistory.plist</code> instead. In all cases, data stays on your Mac.</p>
 
     <h2>Permissions Required</h2>
     <p>CopyHistory requires the following macOS permissions to function:</p>
@@ -101,13 +102,13 @@
 
     <h2>Data Retention</h2>
     <ul>
-        <li>Clipboard history is retained based on your configured retention policy (by time or item count).</li>
-        <li>You can clear your entire history at any time from within the app.</li>
+        <li>Clipboard history is retained based on your configured retention settings (for example by time or item count), where you enable them.</li>
+        <li><strong>Clear</strong> removes history entries but keeps pinned items, favorites, and entries tied to manual custom lists. <strong>Clear All</strong> removes all stored history entries from the database (see in-app controls).</li>
         <li>Uninstalling the app does <strong>not</strong> automatically delete your stored data. To completely remove all data:
             <ol>
-                <li>Clear your history from within the app.</li>
+                <li>Use <strong>Clear All</strong> in the app (or delete data from within the app) if you want the database emptied first.</li>
                 <li>Uninstall the app.</li>
-                <li>Delete the folders listed under "Data Storage Locations" above.</li>
+                <li>Remove the sandbox container and paths listed under "Data Storage Locations" above (for default sandboxed installs, deleting <code>~/Library/Containers/com.huagx.copyhistory</code> removes container data).</li>
             </ol>
         </li>
     </ul>

@@ -126,44 +126,45 @@
         <div class="faq-item">
             <div class="faq-question">Q: What permissions does the app need?</div>
             <div class="faq-answer">
-                A: CopyHistory requires the following permissions:
+                A: CopyHistory uses the following:
                 <ul>
-                    <li><strong>Accessibility</strong>: Used for the automatic paste feature. You can grant it in System Settings → Privacy & Security → Accessibility. The app still works without this permission, but you'll need to paste manually.</li>
-                    <li><strong>Clipboard Access</strong>: Automatically granted. Used to monitor and store clipboard history.</li>
+                    <li><strong>Accessibility</strong>: Used for automatic paste (simulated key events). Grant it in System Settings → Privacy & Security → Accessibility. Without it, you can still browse history and copy or paste manually.</li>
+                    <li><strong>Clipboard</strong>: Used to read the pasteboard so new copies can be recorded. Data stays on your device.</li>
                 </ul>
+                For step-by-step Accessibility setup, see <a href="permission-guide.html">Accessibility Permission Guide</a>.
             </div>
         </div>
 
         <div class="faq-item">
             <div class="faq-question">Q: How do I open clipboard history with a keyboard shortcut?</div>
             <div class="faq-answer">
-                A: The default shortcut is <code>⌥V</code> (Option + V). You can customize it in the app's Preferences.
+                A: The default shortcut is <code>⌥V</code> (Option + V). You can change it under Preferences → Shortcuts. You can also enable opening the window by <strong>double-pressing a modifier key</strong> (for example double Option), configured in the same section.
             </div>
         </div>
 
         <div class="faq-item">
             <div class="faq-question">Q: How do I pin frequently used items?</div>
             <div class="faq-answer">
-                A: In the history window, select the item you want to pin and press <code>⌘P</code>. Pinned items appear at the top of the list, with a maximum of 21 pinned items.
+                A: In the history window, select the item and use the pin shortcut (default <code>⌥P</code>, Option + P — customizable in Preferences). You can have up to 21 pinned slots; pin position (top or bottom) is configurable.
             </div>
         </div>
 
         <div class="faq-item">
             <div class="faq-question">Q: Where is my data stored?</div>
             <div class="faq-answer">
-                A: All data is stored locally on your Mac:
+                A: Everything is stored locally on your Mac. <strong>App Sandbox is on by default</strong> for released builds; data lives in the app container. Paths use <code>~</code> (your home folder); copy and paste into Finder → Go → Go to Folder (⇧⌘G) or Terminal:
                 <ul>
-                    <li>Clipboard history: <code>~/Library/Application Support/CopyHistory/</code></li>
-                    <li>Preferences: <code>~/Library/Preferences/com.huagx.copyhistory.plist</code></li>
+                    <li>Database: <code>~/Library/Containers/com.huagx.copyhistory/Data/Library/Application Support/CopyHistory/</code></li>
+                    <li>Preferences: <code>~/Library/Containers/com.huagx.copyhistory/Data/Library/Preferences/</code> (including <code>com.huagx.copyhistory.plist</code>)</li>
                 </ul>
-                No data is uploaded to any server.
+                Rare non-sandboxed builds may use <code>~/Library/Application Support/CopyHistory/</code> and <code>~/Library/Preferences/com.huagx.copyhistory.plist</code>. Nothing is uploaded to our servers. See the <a href="privacy.html">Privacy Policy</a> for details.
             </div>
         </div>
 
         <div class="faq-item">
             <div class="faq-question">Q: How do I clear my history?</div>
             <div class="faq-answer">
-                A: In the app menu, select "Clear" to remove unpinned items. Hold <code>⇧</code> (Shift) while clicking "Clear" to remove all items including pinned ones.
+                A: In the <strong>history window footer</strong>, <strong>Clear</strong> removes entries but keeps pinned items, favorites, and items assigned to manual custom lists. <strong>Clear All</strong> removes every history entry after confirmation. The menu bar <strong>Clear Clipboard History</strong> action follows the same rules as footer <strong>Clear</strong> (not Clear All).
             </div>
         </div>
 
@@ -235,14 +236,15 @@
         <h2>📖 Documentation</h2>
 
         <ul>
+            <li><a href="permission-guide.html">Accessibility Permission Guide</a></li>
             <li><a href="privacy.html">Privacy Policy</a></li>
             <li><a href="terms.html">Terms of Use</a></li>
-            <li>In-app help: Open the app and press <code>⌘,</code> to open Preferences for option descriptions.</li>
+            <li>In-app help: Open the app and press <code>⌘,</code> (Command + Comma) to open Preferences for option descriptions.</li>
         </ul>
 
         <div class="footer">
             <p>CopyHistory - Clipboard History Manager</p>
-            <p>Last Updated: February 8, 2026</p>
+            <p>Last Updated: March 22, 2026</p>
         </div>
     </div>
 </body>
