@@ -1,151 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support - QuickPreview</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            color: #333;
-            background-color: #f5f5f5;
-        }
-        .container {
-            background-color: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #2c3e50;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 15px;
-            margin-top: 0;
-        }
-        h2 {
-            color: #34495e;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-        }
-        a {
-            color: #3498db;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        code {
-            background-color: #f4f4f4;
-            padding: 2px 6px;
-            border-radius: 3px;
-            font-family: 'Courier New', monospace;
-            font-size: 0.9em;
-        }
-        ul, ol {
-            margin: 15px 0;
-            padding-left: 30px;
-        }
-        li {
-            margin: 8px 0;
-        }
-        .contact-section {
-            background-color: #f8f9fa;
-            padding: 20px;
-            border-radius: 5px;
-            margin: 20px 0;
-        }
-        .info {
-            background-color: #d1ecf1;
-            border-left: 4px solid #17a2b8;
-            padding: 15px;
-            margin: 20px 0;
-        }
-        .faq-item {
-            margin: 20px 0;
-        }
-        .faq-question {
-            font-weight: bold;
-            color: #2c3e50;
-            margin-bottom: 8px;
-        }
-        .faq-answer {
-            color: #555;
-            margin-left: 20px;
-        }
-        .footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            color: #777;
-            font-size: 0.9em;
-            text-align: center;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support - QuickPreview</title>
+  <meta name="description" content="QuickPreview support, FAQ, and contact information.">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>QuickPreview Support</h1>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="QuickPreview">
+        <img src="assets/app-icon.png" alt="">
+        <span>QuickPreview</span>
+      </a>
+      <nav class="nav" aria-label="QuickPreview">
+        <a href="index.html" data-i18n="home">Home</a>
+        <a href="support.html" aria-current="page" data-i18n="support">Support</a>
+        <a href="privacy.html" data-i18n="privacy">Privacy</a>
+        <span class="language-toggle" aria-label="Language">
+          <button type="button" data-lang-button="en">EN</button>
+          <button type="button" data-lang-button="zh">中文</button>
+        </span>
+      </nav>
+    </header>
 
-        <p>If you run into a problem with QuickPreview or want to request an improvement, this page is the public support page for the app.</p>
+    <main>
+      <section class="doc-hero">
+        <p class="eyebrow" data-i18n="support">Support</p>
+        <h1 data-i18n="supportTitle">QuickPreview Support</h1>
+        <p class="lead" data-i18n="supportIntro">If you run into a problem with QuickPreview or want to request an improvement, this page is the public support page for the app.</p>
+      </section>
 
-        <div class="contact-section">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:huag9998@gmail.com">huag9998@gmail.com</a></p>
-            <div class="info">
-                Please include your macOS version, QuickPreview version, what file type you previewed, and the steps needed to reproduce the issue.
+      <section class="section compact">
+        <div class="support-grid">
+          <article class="support-card">
+            <h2 data-i18n="contactTitle">Contact</h2>
+            <p data-i18n-html="contactLine">Email: <a href="mailto:huag9998@gmail.com">huag9998@gmail.com</a></p>
+            <div class="callout" data-i18n="contactHint">Please include your macOS version, QuickPreview version, what file type you previewed, and the steps needed to reproduce the issue.</div>
+          </article>
+          <article class="support-card">
+            <h2 data-i18n="featurePrivacyTitle">Local by design</h2>
+            <p data-i18n="featurePrivacyBody">Previewed content is processed on your Mac and is not uploaded by QuickPreview.</p>
+            <a href="privacy.html" data-i18n="privacyCta">Read privacy policy</a>
+          </article>
+          <article class="support-card">
+            <img data-lang-src data-src-en="assets/screenshot-4.png" data-src-zh="assets/zh/screenshot-4.png" src="assets/screenshot-4.png" alt="">
+          </article>
+        </div>
+      </section>
+
+      <section class="section compact">
+        <div class="doc-panel doc-content">
+          <h2 data-i18n="faqTitle">Frequently Asked Questions</h2>
+          <div class="faq-list">
+            <div class="faq-item">
+              <div class="faq-question" data-i18n="faq1Q">Q: What does QuickPreview do?</div>
+              <div class="faq-answer" data-i18n="faq1A">A: QuickPreview extends macOS Quick Look so you can inspect folder contents, Markdown files, and supported archives more efficiently.</div>
             </div>
-        </div>
-
-        <h2>Frequently Asked Questions</h2>
-
-        <div class="faq-item">
-            <div class="faq-question">Q: What does QuickPreview do?</div>
-            <div class="faq-answer">
-                A: QuickPreview extends macOS Quick Look so you can inspect folder contents, Markdown files, and supported archives more efficiently.
+            <div class="faq-item">
+              <div class="faq-question" data-i18n="faq2Q">Q: Does QuickPreview upload my files?</div>
+              <div class="faq-answer" data-i18n-html="faq2A">A: No. QuickPreview reads selected content locally to generate previews and does not upload that content to external servers. See the <a href="privacy.html">Privacy Policy</a> for details.</div>
             </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">Q: Does QuickPreview upload my files?</div>
-            <div class="faq-answer">
-                A: No. QuickPreview reads selected content locally to generate previews and does not upload that content to external servers. See the <a href="privacy.html">Privacy Policy</a> for details.
+            <div class="faq-item">
+              <div class="faq-question" data-i18n="faq3Q">Q: Which file types are currently supported?</div>
+              <div class="faq-answer" data-i18n="faq3A">A: QuickPreview currently focuses on folder previews, Markdown previews, and supported archive previews within macOS Quick Look.</div>
             </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">Q: Which file types are currently supported?</div>
-            <div class="faq-answer">
-                A: QuickPreview currently focuses on folder previews, Markdown previews, and supported archive previews within macOS Quick Look.
+            <div class="faq-item">
+              <div class="faq-question" data-i18n="faq4Q">Q: Why does a preview sometimes look incomplete?</div>
+              <div class="faq-answer" data-i18n="faq4A">A: Some previews depend on what macOS allows the Quick Look extension to read for the selected item. Very large folders, unusual file structures, or unsupported formats may lead to limited results.</div>
             </div>
+          </div>
+
+          <h2 data-i18n="reportingTitle">Reporting Issues</h2>
+          <ol>
+            <li data-i18n="report1">Describe the problem clearly.</li>
+            <li data-i18n="report2">Include the file or folder type involved.</li>
+            <li data-i18n="report3">List the steps to reproduce the issue.</li>
+            <li data-i18n="report4">Include your macOS version and QuickPreview version.</li>
+            <li data-i18n="report5">Attach a screenshot if it helps explain the problem.</li>
+          </ol>
+
+          <p><a href="index.html" data-i18n="backHome">Back to QuickPreview home</a></p>
         </div>
+      </section>
+    </main>
 
-        <div class="faq-item">
-            <div class="faq-question">Q: Why does a preview sometimes look incomplete?</div>
-            <div class="faq-answer">
-                A: Some previews depend on what macOS allows the Quick Look extension to read for the selected item. Very large folders, unusual file structures, or unsupported formats may lead to limited results.
-            </div>
-        </div>
-
-        <h2>Reporting Issues</h2>
-        <ol>
-            <li>Describe the problem clearly.</li>
-            <li>Include the file or folder type involved.</li>
-            <li>List the steps to reproduce the issue.</li>
-            <li>Include your macOS version and QuickPreview version.</li>
-            <li>Attach a screenshot if it helps explain the problem.</li>
-        </ol>
-
-        <p><a href="index.html">Back to QuickPreview home</a></p>
-
-        <div class="footer">
-            <p>QuickPreview Support</p>
-            <p>Page updated: April 19, 2026</p>
-        </div>
-    </div>
+    <footer class="footer">
+      <span>QuickPreview Support</span>
+      <span data-i18n="updated">Page updated: April 19, 2026</span>
+    </footer>
+  </div>
+  <script src="locale.js"></script>
 </body>
 </html>

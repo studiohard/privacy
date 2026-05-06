@@ -1,134 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - CopyHistory</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            color: #333;
-        }
-        h1 {
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
-        }
-        h2 {
-            color: #34495e;
-            margin-top: 30px;
-        }
-        strong {
-            color: #2c3e50;
-        }
-        code {
-            background-color: #f4f4f4;
-            padding: 2px 6px;
-            border-radius: 3px;
-            font-family: 'Courier New', monospace;
-        }
-        ul {
-            margin: 10px 0;
-        }
-        li {
-            margin: 5px 0;
-        }
-        hr {
-            border: none;
-            border-top: 1px solid #ddd;
-            margin: 30px 0;
-        }
-        a {
-            color: #3498db;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/site.css">
+    <link rel="icon" href="assets/app-icon.png">
+    <script src="assets/language.js" defer></script>
 </head>
 <body>
-    <h1>CopyHistory Privacy Policy</h1>
+    <header class="site-shell site-header">
+        <a class="brand" href="index.html"><img class="brand-mark" src="assets/app-icon.png" alt=""><span>CopyHistory</span></a>
+        <nav class="top-nav" aria-label="Primary">
+            <a href="index.html"><span class="lang lang-inline lang-en">Home</span><span class="lang lang-inline lang-zh">首页</span></a>
+            <a href="support.html"><span class="lang lang-inline lang-en">Support</span><span class="lang lang-inline lang-zh">支持</span></a>
+            <a href="permission-guide.html"><span class="lang lang-inline lang-en">Accessibility</span><span class="lang lang-inline lang-zh">辅助功能</span></a>
+            <a href="terms.html"><span class="lang lang-inline lang-en">Terms</span><span class="lang lang-inline lang-zh">条款</span></a>
+            <span class="language-toggle" aria-label="Language"><button type="button" data-lang-button="en">EN</button><button type="button" data-lang-button="zh">中文</button></span>
+        </nav>
+    </header>
 
-    <p><strong>Last Updated: March 22, 2026</strong></p>
+    <main class="site-shell">
+        <section class="page-hero">
+            <p class="eyebrow lang lang-en">Last updated: March 22, 2026</p>
+            <p class="eyebrow lang lang-zh">最后更新：2026 年 3 月 22 日</p>
+            <h1><span class="lang lang-en">Privacy Policy</span><span class="lang lang-zh">隐私政策</span></h1>
+            <p class="lang lang-en">CopyHistory is designed around local storage. It does not collect, transmit, sell, or share your personal data.</p>
+            <p class="lang lang-zh">CopyHistory 以本地存储为核心设计，不收集、不传输、不出售，也不分享你的个人数据。</p>
+        </section>
 
-    <h2>Overview</h2>
-    <p>CopyHistory is a clipboard history manager for macOS. It stores and manages your clipboard history entirely on your local device. This privacy policy explains how CopyHistory handles your information.</p>
+        <section class="content-band">
+            <article class="doc-panel">
+                <h2><span class="lang lang-inline lang-en">Overview</span><span class="lang lang-inline lang-zh">概览</span></h2>
+                <p class="lang lang-en">CopyHistory is a clipboard history manager for macOS. It stores and manages your clipboard history entirely on your local device.</p>
+                <p class="lang lang-zh">CopyHistory 是一款 macOS 剪贴板历史管理工具。它会在你的本机设备上保存和管理剪贴板历史记录。</p>
 
-    <h2>Data Collection</h2>
-    <p><strong>CopyHistory does NOT collect, transmit, or share any of your personal data.</strong></p>
+                <h2><span class="lang lang-inline lang-en">Data Collection</span><span class="lang lang-inline lang-zh">数据收集</span></h2>
+                <p class="lang lang-en"><strong>CopyHistory does not collect, transmit, or share personal data.</strong></p>
+                <p class="lang lang-zh"><strong>CopyHistory 不会收集、传输或分享个人数据。</strong></p>
 
-    <h3>What Is Stored Locally</h3>
-    <ul>
-        <li><strong>Clipboard History</strong>: Copied items (text, images, files, and other pasteboard types the app records) are stored locally on your Mac.</li>
-        <li><strong>Application Preferences</strong>: Settings and keyboard shortcuts are stored locally (UserDefaults and related app storage).</li>
-        <li><strong>Pins, Favorites, Notes, and Lists</strong>: Pin assignments, starred favorites, per-item notes, and custom list/filter metadata are stored in the same local database as your history.</li>
-    </ul>
+                <h3><span class="lang lang-inline lang-en">What is stored locally</span><span class="lang lang-inline lang-zh">本地保存的内容</span></h3>
+                <ul class="lang lang-en">
+                    <li><strong>Clipboard history:</strong> copied items such as text, images, files, and other supported pasteboard types.</li>
+                    <li><strong>Preferences:</strong> settings, shortcuts, and related app configuration.</li>
+                    <li><strong>Organization metadata:</strong> pins, favorites, notes, and custom list data.</li>
+                </ul>
+                <ul class="lang lang-zh">
+                    <li><strong>剪贴板历史：</strong>复制过的文本、图片、文件以及其他受支持的剪贴板类型。</li>
+                    <li><strong>偏好设置：</strong>应用设置、快捷键以及相关配置。</li>
+                    <li><strong>整理信息：</strong>置顶、收藏、备注和自定义列表数据。</li>
+                </ul>
 
-    <h3>Data Storage Locations</h3>
-    <p>Released builds of CopyHistory have <strong>App Sandbox enabled by default</strong>. The app only writes inside its sandbox container. <code>~</code> means your home folder; you can copy these paths and paste them into Finder → Go → Go to Folder (⇧⌘G) or Terminal.</p>
-    <ul>
-        <li><strong>History database (SwiftData)</strong>: <code>~/Library/Containers/com.huagx.copyhistory/Data/Library/Application Support/CopyHistory/</code> — contains <code>Storage.sqlite</code> and related SQLite files.</li>
-        <li><strong>Preferences</strong>: <code>~/Library/Containers/com.huagx.copyhistory/Data/Library/Preferences/</code> — includes <code>com.huagx.copyhistory.plist</code> and other preference data for the app.</li>
-    </ul>
-    <p>Rare non-sandboxed developer builds may use <code>~/Library/Application Support/CopyHistory/</code> and <code>~/Library/Preferences/com.huagx.copyhistory.plist</code> instead. In all cases, data stays on your Mac.</p>
+                <h3><span class="lang lang-inline lang-en">Storage locations</span><span class="lang lang-inline lang-zh">数据存储位置</span></h3>
+                <p class="lang lang-en">Released builds have App Sandbox enabled by default. <code>~</code> means your home folder.</p>
+                <p class="lang lang-zh">发布版本默认启用 App Sandbox。<code>~</code> 表示你的用户主目录。</p>
+                <ul>
+                    <li><span class="lang lang-inline lang-en"><strong>History database:</strong></span><span class="lang lang-inline lang-zh"><strong>历史数据库：</strong></span> <code>~/Library/Containers/com.huagx.copyhistory/Data/Library/Application Support/CopyHistory/</code></li>
+                    <li><span class="lang lang-inline lang-en"><strong>Preferences:</strong></span><span class="lang lang-inline lang-zh"><strong>偏好设置：</strong></span> <code>~/Library/Containers/com.huagx.copyhistory/Data/Library/Preferences/</code></li>
+                </ul>
+                <p class="lang lang-en">Rare non-sandboxed developer builds may use <code>~/Library/Application Support/CopyHistory/</code> and <code>~/Library/Preferences/com.huagx.copyhistory.plist</code>. In all cases, data stays on your Mac.</p>
+                <p class="lang lang-zh">少量非沙盒开发版本可能使用 <code>~/Library/Application Support/CopyHistory/</code> 和 <code>~/Library/Preferences/com.huagx.copyhistory.plist</code>。无论哪种情况，数据都保存在你的 Mac 上。</p>
+            </article>
 
-    <h2>Permissions Required</h2>
-    <p>CopyHistory requires the following macOS permissions to function:</p>
+            <article class="doc-panel">
+                <h2><span class="lang lang-inline lang-en">Permissions</span><span class="lang lang-inline lang-zh">权限说明</span></h2>
+                <h3><span class="lang lang-inline lang-en">Accessibility</span><span class="lang lang-inline lang-zh">辅助功能</span></h3>
+                <p class="lang lang-en">Used only to simulate keyboard events for automatic paste. You can use CopyHistory without this permission if you paste manually.</p>
+                <p class="lang lang-zh">仅用于模拟键盘事件以执行自动粘贴。如果你选择手动粘贴，可以不授予此权限。</p>
+                <h3><span class="lang lang-inline lang-en">Clipboard access</span><span class="lang lang-inline lang-zh">剪贴板访问</span></h3>
+                <p class="lang lang-en">Used to read clipboard contents when you copy something, so the item can be stored in local history.</p>
+                <p class="lang lang-zh">用于在你复制内容时读取剪贴板，并将项目保存到本地历史记录。</p>
+            </article>
 
-    <h3>Accessibility Permission</h3>
-    <ul>
-        <li><strong>Purpose</strong>: Required to enable automatic paste functionality.</li>
-        <li><strong>What it does</strong>: Allows the app to simulate keyboard events for pasting.</li>
-        <li><strong>Note</strong>: This permission is only used for the paste feature. You can use CopyHistory without granting this permission; you will simply need to paste manually.</li>
-    </ul>
+            <article class="doc-panel">
+                <h2><span class="lang lang-inline lang-en">Purchases, Services, and Retention</span><span class="lang lang-inline lang-zh">购买、服务与保留</span></h2>
+                <p class="lang lang-en">Optional Pro subscriptions and lifetime purchases are processed by Apple's App Store. CopyHistory does not collect payment details or Apple ID credentials.</p>
+                <p class="lang lang-zh">可选的 Pro 订阅和终身购买由 Apple App Store 处理。CopyHistory 不收集付款信息或 Apple ID 凭据。</p>
+                <p class="lang lang-en">CopyHistory does not use third-party analytics, advertising, tracking, or cloud sync services. Clipboard history is retained according to your configured app settings and can be cleared from within the app.</p>
+                <p class="lang lang-zh">CopyHistory 不使用第三方分析、广告、跟踪或云同步服务。剪贴板历史会根据你的应用设置保留，也可以在应用内清理。</p>
+            </article>
 
-    <h3>Clipboard Access</h3>
-    <ul>
-        <li><strong>Purpose</strong>: To monitor and store your clipboard history.</li>
-        <li><strong>What it does</strong>: Reads clipboard contents when you copy something.</li>
-        <li><strong>Note</strong>: All clipboard data remains on your device.</li>
-    </ul>
+            <article class="doc-panel">
+                <h2><span class="lang lang-inline lang-en">Contact</span><span class="lang lang-inline lang-zh">联系我们</span></h2>
+                <p class="lang lang-en">Questions about this policy can be sent to <a href="mailto:huag9998@gmail.com">huag9998@gmail.com</a>.</p>
+                <p class="lang lang-zh">如对此政策有疑问，请发送邮件至 <a href="mailto:huag9998@gmail.com">huag9998@gmail.com</a>。</p>
+            </article>
+        </section>
+    </main>
 
-    <h2>In-App Purchases &amp; Subscriptions</h2>
-    <p>CopyHistory offers optional Pro subscriptions and a lifetime purchase through Apple's App Store. All payment processing is handled entirely by Apple. CopyHistory does not collect, store, or have access to any payment information, billing details, or Apple ID credentials.</p>
-
-    <h2>Third-Party Services</h2>
-    <p>CopyHistory does <strong>not</strong> use any third-party analytics, advertising, or tracking services. No data is sent to any external server.</p>
-
-    <h2>Data Retention</h2>
-    <ul>
-        <li>Clipboard history is retained based on your configured retention settings (for example by time or item count), where you enable them.</li>
-        <li><strong>Clear</strong> removes history entries but keeps pinned items, favorites, and entries tied to manual custom lists. <strong>Clear All</strong> removes all stored history entries from the database (see in-app controls).</li>
-        <li>Uninstalling the app does <strong>not</strong> automatically delete your stored data. To completely remove all data:
-            <ol>
-                <li>Use <strong>Clear All</strong> in the app (or delete data from within the app) if you want the database emptied first.</li>
-                <li>Uninstall the app.</li>
-                <li>Remove the sandbox container and paths listed under "Data Storage Locations" above (for default sandboxed installs, deleting <code>~/Library/Containers/com.huagx.copyhistory</code> removes container data).</li>
-            </ol>
-        </li>
-    </ul>
-
-    <h2>Children's Privacy</h2>
-    <p>CopyHistory does not knowingly collect any information from children. The app is a general-purpose productivity tool suitable for all ages.</p>
-
-    <h2>Changes to This Policy</h2>
-    <p>We may update this privacy policy from time to time. Changes will be indicated by updating the "Last Updated" date at the top of this page.</p>
-
-    <h2>Contact</h2>
-    <p>If you have any questions about this privacy policy, please contact us at <a href="mailto:huag9998@gmail.com">huag9998@gmail.com</a>.</p>
-
-    <h2>Your Rights</h2>
-    <p>Since all data is stored locally on your device:</p>
-    <ul>
-        <li>You have complete control over your data at all times.</li>
-        <li>You can view all stored data within the application.</li>
-        <li>You can delete all data at any time.</li>
-        <li>No data leaves your device unless you explicitly share it.</li>
-    </ul>
+    <footer class="site-shell site-footer">CopyHistory</footer>
 </body>
 </html>

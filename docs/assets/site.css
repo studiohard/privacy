@@ -1,0 +1,469 @@
+:root {
+    color-scheme: light;
+    --bg: #f6f2ea;
+    --surface: #fffaf1;
+    --surface-strong: #ffffff;
+    --ink: #1e2424;
+    --muted: #5e6762;
+    --line: rgba(30, 36, 36, 0.12);
+    --accent: #0c7a70;
+    --accent-strong: #075e58;
+    --accent-soft: #e2f3ef;
+    --warm: #d58a35;
+    --shadow: 0 24px 70px rgba(39, 44, 39, 0.13);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background:
+        radial-gradient(circle at top left, rgba(12, 122, 112, 0.12), transparent 34rem),
+        linear-gradient(180deg, #fbf7ef 0%, var(--bg) 42%, #f9fbf7 100%);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.65;
+}
+
+a {
+    color: var(--accent-strong);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+code {
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.68);
+    padding: 0.12rem 0.36rem;
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.92em;
+}
+
+.site-shell {
+    width: min(1120px, calc(100% - 32px));
+    margin: 0 auto;
+}
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 24px 0;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--ink);
+    font-weight: 760;
+    letter-spacing: 0;
+}
+
+.brand-mark {
+    width: 40px;
+    height: 40px;
+    border-radius: 9px;
+    box-shadow: 0 12px 26px rgba(30, 36, 36, 0.16);
+}
+
+.top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.top-nav a,
+.language-toggle button,
+.button {
+    display: inline-flex;
+    min-height: 38px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    padding: 8px 14px;
+    font-size: 0.94rem;
+    font-weight: 650;
+}
+
+.top-nav a {
+    color: var(--muted);
+}
+
+.top-nav a:hover {
+    background: rgba(255, 255, 255, 0.7);
+    color: var(--ink);
+    text-decoration: none;
+}
+
+.language-toggle {
+    display: inline-flex;
+    gap: 4px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 3px;
+    background: rgba(255, 255, 255, 0.72);
+}
+
+.language-toggle button {
+    min-height: 32px;
+    border: 0;
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+}
+
+.language-toggle button.is-active {
+    background: var(--ink);
+    color: #ffffff;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: minmax(0, 0.94fr) minmax(360px, 1.06fr);
+    gap: 42px;
+    align-items: center;
+    padding: 52px 0 44px;
+}
+
+.eyebrow {
+    margin: 0 0 14px;
+    color: var(--accent-strong);
+    font-size: 0.86rem;
+    font-weight: 760;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+h1,
+.hero-title {
+    margin: 0;
+    max-width: 760px;
+    font-size: clamp(2.42rem, 6vw, 5.25rem);
+    line-height: 0.96;
+    letter-spacing: 0;
+}
+
+.hero-copy {
+    max-width: 680px;
+    margin: 24px 0 0;
+    color: var(--muted);
+    font-size: 1.15rem;
+}
+
+.hero-actions,
+.link-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.button {
+    border: 1px solid transparent;
+    background: var(--accent);
+    color: #ffffff;
+    box-shadow: 0 14px 34px rgba(12, 122, 112, 0.24);
+}
+
+.button:hover {
+    background: var(--accent-strong);
+    text-decoration: none;
+}
+
+.button.secondary {
+    border-color: var(--line);
+    background: rgba(255, 255, 255, 0.72);
+    color: var(--ink);
+    box-shadow: none;
+}
+
+.hero-media {
+    min-width: 0;
+}
+
+.slideshow {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.72);
+    border-radius: 18px;
+    background: var(--surface-strong);
+    box-shadow: var(--shadow);
+}
+
+.slide-track {
+    display: flex;
+    transition: transform 520ms ease;
+    will-change: transform;
+}
+
+.slide {
+    flex: 0 0 100%;
+    margin: 0;
+    aspect-ratio: 1.5;
+    background: linear-gradient(180deg, #f6f8f4 0%, #edf3ee 100%);
+}
+
+.slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 18px;
+}
+
+.slide-caption {
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.58);
+    border-radius: 8px;
+    background: rgba(255, 250, 241, 0.82);
+    padding: 10px 12px;
+    color: var(--ink);
+    font-weight: 720;
+    backdrop-filter: blur(18px);
+}
+
+.slide-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.slide-dot {
+    width: 9px;
+    height: 9px;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(30, 36, 36, 0.28);
+    cursor: pointer;
+}
+
+.slide-dot.is-active {
+    width: 24px;
+    background: var(--accent);
+}
+
+.page-hero {
+    padding: 54px 0 22px;
+}
+
+.page-hero p {
+    max-width: 760px;
+    margin: 20px 0 0;
+    color: var(--muted);
+    font-size: 1.12rem;
+}
+
+.content-band {
+    padding: 30px 0 64px;
+}
+
+.grid {
+    display: grid;
+    gap: 18px;
+}
+
+.grid.three {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid.two {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.card,
+.doc-panel,
+.step {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.74);
+    box-shadow: 0 12px 40px rgba(30, 36, 36, 0.06);
+}
+
+.card {
+    padding: 22px;
+}
+
+.card h2,
+.card h3,
+.doc-panel h2,
+.step h2,
+.step h3 {
+    margin-top: 0;
+}
+
+.card p,
+.doc-panel p,
+.step p {
+    color: var(--muted);
+}
+
+.doc-panel {
+    max-width: 900px;
+    padding: 34px;
+}
+
+.doc-panel + .doc-panel {
+    margin-top: 18px;
+}
+
+.doc-panel h2 {
+    padding-top: 4px;
+}
+
+.doc-panel h3 {
+    margin-top: 24px;
+}
+
+.doc-panel li,
+.step li {
+    margin: 8px 0;
+}
+
+.note,
+.warning {
+    border-left: 4px solid var(--accent);
+    border-radius: 8px;
+    margin: 20px 0;
+    padding: 16px 18px;
+    background: var(--accent-soft);
+}
+
+.warning {
+    border-left-color: var(--warm);
+    background: #fff1db;
+}
+
+.step {
+    display: grid;
+    grid-template-columns: 58px minmax(0, 1fr);
+    gap: 18px;
+    margin: 18px 0;
+    padding: 22px;
+}
+
+.step-number {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #ffffff;
+    font-weight: 760;
+}
+
+.guide-image {
+    display: block;
+    width: 100%;
+    max-width: 760px;
+    margin-top: 16px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    box-shadow: 0 18px 46px rgba(30, 36, 36, 0.12);
+}
+
+.site-footer {
+    border-top: 1px solid var(--line);
+    padding: 26px 0 40px;
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+.lang {
+    display: none;
+}
+
+html[data-lang="en"] .lang-en,
+html[data-lang="zh"] .lang-zh {
+    display: block;
+}
+
+html[data-lang="en"] .lang-inline.lang-en,
+html[data-lang="zh"] .lang-inline.lang-zh {
+    display: inline;
+}
+
+html[data-lang="en"] .lang-flex.lang-en,
+html[data-lang="zh"] .lang-flex.lang-zh {
+    display: flex;
+}
+
+html[data-lang="en"] .only-zh,
+html[data-lang="zh"] .only-en {
+    display: none;
+}
+
+@media (max-width: 860px) {
+    .site-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .top-nav {
+        justify-content: flex-start;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding-top: 28px;
+    }
+
+    .grid.three,
+    .grid.two {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 560px) {
+    .site-shell {
+        width: min(100% - 22px, 1120px);
+    }
+
+    .top-nav a {
+        padding-inline: 9px;
+    }
+
+    .slideshow {
+        border-radius: 12px;
+    }
+
+    .slide-caption {
+        position: static;
+        border-width: 1px 0 0;
+        border-radius: 0;
+        background: rgba(255, 255, 255, 0.9);
+    }
+
+    .slide img {
+        padding: 10px;
+    }
+
+    .doc-panel {
+        padding: 24px 18px;
+    }
+
+    .step {
+        grid-template-columns: 1fr;
+    }
+}

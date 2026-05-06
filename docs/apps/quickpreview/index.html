@@ -1,104 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuickPreview - Quick Look Enhancements for macOS</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            color: #333;
-            background-color: #f5f5f5;
-        }
-        .container {
-            background-color: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #2c3e50;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 15px;
-            margin-top: 0;
-        }
-        h2 {
-            color: #34495e;
-            margin-top: 30px;
-        }
-        .nav {
-            margin: 30px 0;
-            padding: 20px;
-            background-color: #f8f9fa;
-            border-radius: 5px;
-        }
-        .nav a {
-            display: inline-block;
-            margin: 10px 15px 10px 0;
-            padding: 10px 20px;
-            background-color: #3498db;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        .nav a:hover {
-            background-color: #2980b9;
-        }
-        a {
-            color: #3498db;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            color: #777;
-            font-size: 0.9em;
-            text-align: center;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickPreview - Quick Look Enhancements for macOS</title>
+  <meta name="description" content="QuickPreview enhances macOS Quick Look with previews for folders, Markdown files, and supported archives.">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>QuickPreview</h1>
-        <p>QuickPreview enhances macOS Quick Look by showing more useful previews for folders, Markdown files, and supported archives.</p>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="QuickPreview">
+        <img src="assets/app-icon.png" alt="">
+        <span>QuickPreview</span>
+      </a>
+      <nav class="nav" aria-label="QuickPreview">
+        <a href="index.html" aria-current="page" data-i18n="home">Home</a>
+        <a href="support.html" data-i18n="support">Support</a>
+        <a href="privacy.html" data-i18n="privacy">Privacy</a>
+        <span class="language-toggle" aria-label="Language">
+          <button type="button" data-lang-button="en">EN</button>
+          <button type="button" data-lang-button="zh">中文</button>
+        </span>
+      </nav>
+    </header>
 
-        <div class="nav">
-            <a href="support.html">Support</a>
-            <a href="privacy.html">Privacy Policy</a>
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="heroEyebrow">Native Quick Look extensions for macOS</p>
+          <h1 data-i18n="heroTitle">Preview folders, Markdown, and archives without breaking flow.</h1>
+          <p class="lead" data-i18n="heroLead">QuickPreview makes the Space bar more useful: inspect structure, read Markdown, and check archive contents before opening another app.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="support.html" data-i18n="supportCta">Get support</a>
+            <a class="button" href="privacy.html" data-i18n="privacyCta">Read privacy policy</a>
+          </div>
         </div>
-
-        <h2>About QuickPreview</h2>
-        <p>QuickPreview is a native macOS app with Quick Look extensions. It helps you inspect folder contents, Markdown documents, and archive contents more quickly without opening them in a full editor or Finder window.</p>
-
-        <h2>Key Features</h2>
-        <ul>
-            <li>Preview folder contents directly in Quick Look</li>
-            <li>Preview Markdown files with a richer reading experience</li>
-            <li>Inspect supported archive contents before extracting</li>
-            <li>Customize preview display settings such as layout and visibility options</li>
-            <li>Privacy-first design with local-only processing</li>
-        </ul>
-
-        <h2>Quick Links</h2>
-        <ul>
-            <li><a href="support.html">Support</a> - FAQ and contact information</li>
-            <li><a href="privacy.html">Privacy Policy</a> - how QuickPreview handles your data</li>
-        </ul>
-
-        <p><a href="../../index.html">Back to site home</a></p>
-
-        <div class="footer">
-            <p>QuickPreview</p>
-            <p>Page updated: April 19, 2026</p>
+        <div class="visual-stack" aria-hidden="true">
+          <div class="screenshot-frame primary-shot">
+            <img data-lang-src data-src-en="assets/screenshot-1.png" data-src-zh="assets/zh/screenshot-1.png" src="assets/screenshot-1.png" alt="">
+          </div>
+          <div class="screenshot-frame secondary-shot">
+            <img data-lang-src data-src-en="assets/screenshot-2.png" data-src-zh="assets/zh/screenshot-2.png" src="assets/screenshot-2.png" alt="">
+          </div>
         </div>
-    </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <h2 data-i18n="featureTitle">Built for fast local inspection</h2>
+          <p data-i18n="featureLead">The app focuses on the moments when Finder's default preview is too thin and opening a full editor is too much.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="card">
+            <span class="marker">01</span>
+            <h3 data-i18n="featureFolderTitle">Folder previews</h3>
+            <p data-i18n="featureFolderBody">Scan folder contents, file counts, and structure directly from Quick Look.</p>
+          </article>
+          <article class="card">
+            <span class="marker">02</span>
+            <h3 data-i18n="featureMarkdownTitle">Markdown reading</h3>
+            <p data-i18n="featureMarkdownBody">Open Markdown files in a richer, more comfortable reading layout.</p>
+          </article>
+          <article class="card">
+            <span class="marker">03</span>
+            <h3 data-i18n="featureArchiveTitle">Archive inspection</h3>
+            <p data-i18n="featureArchiveBody">Check supported archive contents before extracting them.</p>
+          </article>
+          <article class="card">
+            <span class="marker">04</span>
+            <h3 data-i18n="featureSettingsTitle">Preview controls</h3>
+            <p data-i18n="featureSettingsBody">Tune layout, row size, hidden-file visibility, and other display options.</p>
+          </article>
+          <article class="card">
+            <span class="marker">05</span>
+            <h3 data-i18n="featurePrivacyTitle">Local by design</h3>
+            <p data-i18n="featurePrivacyBody">Previewed content is processed on your Mac and is not uploaded by QuickPreview.</p>
+          </article>
+          <article class="card">
+            <span class="marker">06</span>
+            <h3 data-i18n="featureMacTitle">macOS native</h3>
+            <p data-i18n="featureMacBody">Designed around Quick Look, Finder, and the desktop workflow you already use.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section compact">
+        <div class="section-header">
+          <h2 data-i18n="linksTitle">Quick links</h2>
+          <p data-i18n="linksLead">Public pages for App Store review, help, and privacy details.</p>
+        </div>
+        <div class="link-grid">
+          <a class="card link-card" href="support.html">
+            <span>
+              <h3 data-i18n="linkSupportTitle">Support</h3>
+              <p data-i18n="linkSupportBody">FAQ, troubleshooting details, and contact information.</p>
+            </span>
+          </a>
+          <a class="card link-card" href="privacy.html">
+            <span>
+              <h3 data-i18n="linkPrivacyTitle">Privacy Policy</h3>
+              <p data-i18n="linkPrivacyBody">How QuickPreview handles files, settings, and local data.</p>
+            </span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>QuickPreview</span>
+      <span data-i18n="updated">Page updated: April 19, 2026</span>
+    </footer>
+  </div>
+  <script src="locale.js"></script>
 </body>
 </html>

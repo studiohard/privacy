@@ -1,108 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CopyHistory - Clipboard History Manager</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            color: #333;
-            background-color: #f5f5f5;
-        }
-        .container {
-            background-color: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #2c3e50;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 15px;
-            margin-top: 0;
-        }
-        h2 {
-            color: #34495e;
-            margin-top: 30px;
-        }
-        .nav {
-            margin: 30px 0;
-            padding: 20px;
-            background-color: #f8f9fa;
-            border-radius: 5px;
-        }
-        .nav a {
-            display: inline-block;
-            margin: 10px 15px 10px 0;
-            padding: 10px 20px;
-            background-color: #3498db;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        .nav a:hover {
-            background-color: #2980b9;
-        }
-        a {
-            color: #3498db;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            color: #777;
-            font-size: 0.9em;
-            text-align: center;
-        }
-    </style>
+    <meta name="description" content="CopyHistory is a privacy-first clipboard history manager for macOS.">
+    <link rel="stylesheet" href="assets/site.css">
+    <link rel="icon" href="assets/app-icon.png">
+    <script src="assets/language.js" defer></script>
+    <script src="assets/slideshow.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <h1>CopyHistory</h1>
-        <p>A lightweight clipboard history manager for macOS.</p>
+    <header class="site-shell site-header">
+        <a class="brand" href="index.html" aria-label="CopyHistory home">
+            <img class="brand-mark" src="assets/app-icon.png" alt="">
+            <span>CopyHistory</span>
+        </a>
+        <nav class="top-nav" aria-label="Primary">
+            <a href="support.html"><span class="lang lang-inline lang-en">Support</span><span class="lang lang-inline lang-zh">支持</span></a>
+            <a href="permission-guide.html"><span class="lang lang-inline lang-en">Accessibility</span><span class="lang lang-inline lang-zh">辅助功能</span></a>
+            <a href="privacy.html"><span class="lang lang-inline lang-en">Privacy</span><span class="lang lang-inline lang-zh">隐私</span></a>
+            <a href="terms.html"><span class="lang lang-inline lang-en">Terms</span><span class="lang lang-inline lang-zh">条款</span></a>
+            <span class="language-toggle" aria-label="Language">
+                <button type="button" data-lang-button="en">EN</button>
+                <button type="button" data-lang-button="zh">中文</button>
+            </span>
+        </nav>
+    </header>
 
-        <div class="nav">
-            <a href="support.html">Support</a>
-            <a href="permission-guide.html">Accessibility</a>
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="terms.html">Terms of Use</a>
-        </div>
+    <main>
+        <section class="site-shell hero">
+            <div>
+                <p class="eyebrow lang lang-en">Native macOS clipboard history</p>
+                <p class="eyebrow lang lang-zh">原生 macOS 剪贴板历史</p>
+                <h1 class="hero-title">
+                    <span class="lang lang-en">Clipboard history that stays on your Mac.</span>
+                    <span class="lang lang-zh">留在你 Mac 上的剪贴板历史。</span>
+                </h1>
+                <p class="hero-copy lang lang-en">CopyHistory records what you copy, keeps it searchable, and helps you paste back faster with pins, favorites, notes, previews, and custom lists. No analytics. No cloud sync. Your history stays local.</p>
+                <p class="hero-copy lang lang-zh">CopyHistory 会记录你复制过的内容，让它们可搜索、可预览、可收藏、可置顶，也支持备注和自定义列表。没有分析统计，没有云同步，历史记录保存在本机。</p>
+                <div class="hero-actions">
+                    <a class="button" href="support.html"><span class="lang lang-inline lang-en">Get support</span><span class="lang lang-inline lang-zh">获取支持</span></a>
+                    <a class="button secondary" href="privacy.html"><span class="lang lang-inline lang-en">Read privacy policy</span><span class="lang lang-inline lang-zh">查看隐私政策</span></a>
+                </div>
+            </div>
+            <div class="hero-media">
+                <div class="slideshow only-en" data-slideshow aria-label="CopyHistory app screenshots">
+                    <div class="slide-track" data-slide-track>
+                        <figure class="slide"><img src="assets/preview/en/screenshot-1.png" alt="CopyHistory history window"></figure>
+                        <figure class="slide"><img src="assets/preview/en/screenshot-2.png" alt="CopyHistory search and filters"></figure>
+                        <figure class="slide"><img src="assets/preview/en/screenshot-3.png" alt="CopyHistory settings"></figure>
+                    </div>
+                    <div class="slide-caption">
+                        <span data-slide-caption>Browse recent clipboard items</span>
+                        <span data-slide-caption hidden>Filter text, images, files, and favorites</span>
+                        <span data-slide-caption hidden>Adjust behavior for your workflow</span>
+                        <span class="slide-controls" aria-label="Choose screenshot">
+                            <button class="slide-dot" type="button" data-slide-to="0" aria-label="Screenshot 1"></button>
+                            <button class="slide-dot" type="button" data-slide-to="1" aria-label="Screenshot 2"></button>
+                            <button class="slide-dot" type="button" data-slide-to="2" aria-label="Screenshot 3"></button>
+                        </span>
+                    </div>
+                </div>
+                <div class="slideshow only-zh" data-slideshow aria-label="CopyHistory 应用截图">
+                    <div class="slide-track" data-slide-track>
+                        <figure class="slide"><img src="assets/preview/zh/screenshot-1.png" alt="CopyHistory 历史窗口"></figure>
+                        <figure class="slide"><img src="assets/preview/zh/screenshot-2.png" alt="CopyHistory 搜索与筛选"></figure>
+                        <figure class="slide"><img src="assets/preview/zh/screenshot-3.png" alt="CopyHistory 设置"></figure>
+                    </div>
+                    <div class="slide-caption">
+                        <span data-slide-caption>浏览最近复制的内容</span>
+                        <span data-slide-caption hidden>按文本、图片、文件和收藏筛选</span>
+                        <span data-slide-caption hidden>按你的工作流调整应用行为</span>
+                        <span class="slide-controls" aria-label="选择截图">
+                            <button class="slide-dot" type="button" data-slide-to="0" aria-label="截图 1"></button>
+                            <button class="slide-dot" type="button" data-slide-to="1" aria-label="截图 2"></button>
+                            <button class="slide-dot" type="button" data-slide-to="2" aria-label="截图 3"></button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <h2>About CopyHistory</h2>
-        <p>CopyHistory is a native macOS clipboard history manager. It records what you copy, lets you search and organize it (pins, favorites, notes, and custom lists), and paste back quickly — with everything stored locally on your Mac.</p>
+        <section class="site-shell content-band">
+            <div class="grid three">
+                <article class="card">
+                    <h2><span class="lang lang-inline lang-en">Fast recall</span><span class="lang lang-inline lang-zh">快速找回</span></h2>
+                    <p class="lang lang-en">Open with a shortcut, type to search, preview rich content, and paste the exact item you need.</p>
+                    <p class="lang lang-zh">用快捷键打开，输入即可搜索，预览富文本、图片和文件，再粘贴你需要的那一项。</p>
+                </article>
+                <article class="card">
+                    <h2><span class="lang lang-inline lang-en">Organized history</span><span class="lang lang-inline lang-zh">有序管理</span></h2>
+                    <p class="lang lang-en">Pins, favorites, notes, and custom lists keep recurring snippets and references close at hand.</p>
+                    <p class="lang lang-zh">置顶、收藏、备注和自定义列表，让常用片段和参考内容更容易再次使用。</p>
+                </article>
+                <article class="card">
+                    <h2><span class="lang lang-inline lang-en">Local by design</span><span class="lang lang-inline lang-zh">默认本地保存</span></h2>
+                    <p class="lang lang-en">CopyHistory does not upload clipboard data, use analytics, or track you. Storage is local to your Mac.</p>
+                    <p class="lang lang-zh">CopyHistory 不上传剪贴板数据，不使用分析统计，也不跟踪用户。数据保存在你的 Mac 上。</p>
+                </article>
+            </div>
+        </section>
+    </main>
 
-        <h2>Key Features</h2>
-        <ul>
-            <li>📋 Automatic clipboard history — text, images, files, and other supported types</li>
-            <li>🔍 Fast search, including regex where enabled</li>
-            <li>📌 Pin slots, favorites, per-item notes, and custom lists</li>
-            <li>👁️ Quick Look and previews for files and rich content</li>
-            <li>⌨️ Keyboard-first workflow; customizable shortcuts and optional double-tap modifier to open the window</li>
-            <li>🌍 Multiple interface languages (including English and Chinese, plus additional locales)</li>
-            <li>🔐 Privacy-first — no analytics or cloud sync; data stays on your device (see <a href="privacy.html">Privacy Policy</a>)</li>
-        </ul>
-
-        <h2>Quick Links</h2>
-        <ul>
-            <li><a href="support.html">Support</a> — FAQ, report issues, feature suggestions</li>
-            <li><a href="permission-guide.html">Accessibility Permission Guide</a> — enable paste automation safely</li>
-            <li><a href="privacy.html">Privacy Policy</a> — how data is stored (default App Sandbox; paths under <code>~/Library/...</code>)</li>
-            <li><a href="terms.html">Terms of Use</a> — terms and conditions</li>
-        </ul>
-
-        <div class="footer">
-            <p>CopyHistory - Clipboard History Manager</p>
-            <p>Page updated: March 22, 2026</p>
-        </div>
-    </div>
+    <footer class="site-shell site-footer">
+        <span class="lang lang-inline lang-en">Page updated: March 22, 2026</span>
+        <span class="lang lang-inline lang-zh">页面更新：2026 年 3 月 22 日</span>
+    </footer>
 </body>
 </html>
