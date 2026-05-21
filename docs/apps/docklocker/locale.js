@@ -1,0 +1,253 @@
+(function () {
+  const STORAGE_KEY = "docklocker-site-language";
+  const COPY = {
+    en: {
+      home: "Home",
+      support: "Support",
+      privacy: "Privacy",
+      heroEyebrow: "Dock control for multi-display Macs",
+      heroTitle: "Keep the Dock on the display you choose.",
+      heroLead: "DockLocker helps prevent accidental Dock activation on secondary displays by guiding the cursor away from non-target Dock trigger edges.",
+      supportCta: "Get support",
+      privacyCta: "Read privacy policy",
+      demoStatusTitle: "Dock locked",
+      demoStatusBody: "Temporary unlock: Option",
+      demoBuiltIn: "Built-in Display",
+      demoExternal: "External Display",
+      demoButton: "Lock Dock",
+      featureTitle: "Designed for predictable desktop focus",
+      featureLead: "DockLocker focuses on one job: keeping Dock activation tied to the display that should own your Dock.",
+      featureTargetTitle: "Target display",
+      featureTargetBody: "Choose the display where the Dock should remain available.",
+      featureGuardTitle: "Mouse guard",
+      featureGuardBody: "When locked, DockLocker watches Dock trigger edges and nudges accidental activation away from other displays.",
+      featureShortcutTitle: "Temporary unlock",
+      featureShortcutBody: "Hold your chosen modifier key when you intentionally need the Dock on another display.",
+      featureMenuTitle: "Menu bar access",
+      featureMenuBody: "Check status, lock or unlock, and reopen the main window from the menu bar.",
+      featurePrivacyTitle: "Local by design",
+      featurePrivacyBody: "DockLocker does not collect analytics, accounts, or personal content.",
+      featureMacTitle: "macOS native",
+      featureMacBody: "Built around macOS displays, Accessibility permission, and desktop workflows.",
+      linksTitle: "Quick links",
+      linksLead: "Public pages for App Store review, help, and privacy details.",
+      linkSupportTitle: "Support",
+      linkSupportBody: "FAQ, troubleshooting details, and contact information.",
+      linkPrivacyTitle: "Privacy Policy",
+      linkPrivacyBody: "How DockLocker handles permissions, settings, and local data.",
+      updated: "Page updated: May 21, 2026",
+      backHome: "Back to DockLocker home",
+      supportTitle: "DockLocker Support",
+      supportIntro: "If you run into a problem with DockLocker or want to request an improvement, this page is the public support page for the app.",
+      contactTitle: "Contact",
+      contactLine: "Email: <a href=\"mailto:huag9998@gmail.com\">huag9998@gmail.com</a>",
+      contactHint: "Please include your macOS version, DockLocker version, display setup, Dock position, and the steps needed to reproduce the issue.",
+      supportVisual: "Select one display, then lock Dock activation to that target.",
+      faqTitle: "Frequently Asked Questions",
+      faq1Q: "Q: What does DockLocker do?",
+      faq1A: "A: DockLocker helps keep Dock activation tied to your chosen display on multi-display Macs.",
+      faq2Q: "Q: Why does DockLocker need Accessibility permission?",
+      faq2A: "A: DockLocker needs Accessibility permission to monitor cursor movement near Dock trigger edges and detect the temporary unlock modifier key. See the <a href=\"privacy.html\">Privacy Policy</a> for details.",
+      faq3Q: "Q: How do I temporarily unlock the Dock?",
+      faq3A: "A: Hold the temporary unlock shortcut configured in Settings. The default is Option.",
+      faq4Q: "Q: Why does locking not work on my setup?",
+      faq4A: "A: Check that Accessibility permission is enabled, at least two displays are connected, the target display is available, and the Dock position is supported by your current display arrangement.",
+      faq5Q: "Q: Does DockLocker change my system Dock settings?",
+      faq5A: "A: No. DockLocker reads the Dock orientation to calculate trigger edges, but it does not rewrite your Dock preferences.",
+      troubleshootingTitle: "Troubleshooting",
+      trouble1: "Open System Settings and confirm DockLocker is enabled under Privacy & Security > Accessibility.",
+      trouble2: "Reconnect external displays, then use the app's refresh or recheck action.",
+      trouble3: "Confirm the selected target display is still connected.",
+      trouble4: "Try changing the temporary unlock shortcut if it conflicts with another app.",
+      trouble5: "Quit and reopen DockLocker if macOS display arrangement changes are not reflected.",
+      reportingTitle: "Reporting Issues",
+      report1: "Describe the problem clearly.",
+      report2: "Include your Mac model and macOS version.",
+      report3: "List your display arrangement and Dock position.",
+      report4: "Include your DockLocker version and temporary unlock shortcut.",
+      report5: "Attach a screenshot if it helps explain the problem.",
+      privacyTitle: "DockLocker Privacy Policy",
+      privacyIntro: "DockLocker is a macOS utility for controlling Dock activation across multiple displays. This privacy policy explains how DockLocker handles information on your Mac.",
+      lastUpdated: "Last Updated: May 21, 2026",
+      overviewTitle: "Overview",
+      dataTitle: "Data Collection",
+      noCollect: "DockLocker does NOT collect, transmit, sell, or share your personal data.",
+      accessesTitle: "What DockLocker Accesses",
+      access1: "<strong>Display information</strong>: DockLocker reads connected display names, identifiers, sizes, and arrangement so you can choose a target display.",
+      access2: "<strong>Mouse position and modifier keys</strong>: While locking is enabled, DockLocker uses macOS Accessibility event access to detect cursor movement near Dock trigger edges and whether your temporary unlock key is held.",
+      access3: "<strong>Dock orientation</strong>: DockLocker reads the local macOS Dock orientation setting so it can calculate the relevant trigger edge.",
+      access4: "<strong>App preferences</strong>: Target display selection and temporary unlock shortcut settings are stored locally on your Mac.",
+      notDoTitle: "What DockLocker Does Not Do",
+      notDo1: "It does not record, store, or upload your mouse movement history.",
+      notDo2: "It does not capture screen contents, keystroke text, files, windows, or app content.",
+      notDo3: "It does not use analytics, advertising SDKs, tracking technologies, accounts, or sign-in.",
+      permissionsTitle: "Permissions and Access",
+      permissionsBody: "DockLocker needs macOS Accessibility permission to monitor cursor movement and modifier key state while the Dock lock is active. This permission is used only to provide Dock locking and temporary unlock behavior.",
+      storageTitle: "Local Storage",
+      storageBody: "DockLocker stores settings locally using macOS preferences. These settings remain on your device.",
+      storage1: "<strong>Preferences</strong>: selected display, temporary unlock modifier key, and related app settings",
+      storage2: "<strong>Runtime state</strong>: current lock status is kept in memory while the app is running",
+      networkTitle: "Network Use",
+      networkBody: "DockLocker does not need network access for Dock locking. If you click a support email link or an external web page, that request is handled by Mail, your browser, or another system app.",
+      retentionTitle: "Data Retention",
+      retention1: "Your local preferences remain on your Mac until you change them, reset them, or remove the app data.",
+      retention2: "Runtime state is cleared when the app quits.",
+      retention3: "Uninstalling the app may not automatically remove every local preference file. You can manually delete remaining app data from your Mac if needed.",
+      childrenTitle: "Children's Privacy",
+      childrenBody: "DockLocker does not knowingly collect personal information from children.",
+      changesTitle: "Changes to This Policy",
+      changesBody: "We may update this privacy policy from time to time. Changes will be indicated by updating the Last Updated date at the top of this page.",
+      privacyContactTitle: "Contact",
+      privacyContactBody: "If you have questions about this privacy policy, please contact us at <a href=\"mailto:huag9998@gmail.com\">huag9998@gmail.com</a>.",
+      controlTitle: "Your Control",
+      controlBody: "Because DockLocker works locally on your Mac:",
+      control1: "You choose whether to grant Accessibility permission.",
+      control2: "You choose when Dock locking is enabled or disabled.",
+      control3: "You can remove the app and its local preferences at any time."
+    },
+    zh: {
+      home: "首页",
+      support: "支持",
+      privacy: "隐私",
+      heroEyebrow: "面向多显示器 Mac 的 Dock 控制",
+      heroTitle: "让 Dock 留在你选择的显示器上。",
+      heroLead: "DockLocker 通过在非目标显示器的 Dock 触发边缘引导光标离开，帮助减少副屏意外唤出 Dock 的情况。",
+      supportCta: "获取支持",
+      privacyCta: "查看隐私政策",
+      demoStatusTitle: "Dock 已锁定",
+      demoStatusBody: "临时解锁：Option",
+      demoBuiltIn: "内建显示器",
+      demoExternal: "外接显示器",
+      demoButton: "锁定 Dock",
+      featureTitle: "为可预期的桌面焦点而设计",
+      featureLead: "DockLocker 专注一件事：让 Dock 激活行为绑定到真正应该承载 Dock 的显示器。",
+      featureTargetTitle: "目标显示器",
+      featureTargetBody: "选择 Dock 应该保持可用的显示器。",
+      featureGuardTitle: "鼠标守卫",
+      featureGuardBody: "锁定后，DockLocker 会监听 Dock 触发边缘，并将其他显示器上的误触激活引导离开。",
+      featureShortcutTitle: "临时解锁",
+      featureShortcutBody: "当你确实需要在其他显示器唤出 Dock 时，按住自己设置的修饰键即可临时放行。",
+      featureMenuTitle: "菜单栏入口",
+      featureMenuBody: "从菜单栏查看状态、锁定或解锁，并重新打开主窗口。",
+      featurePrivacyTitle: "本地优先",
+      featurePrivacyBody: "DockLocker 不会收集分析数据、账号信息或个人内容。",
+      featureMacTitle: "macOS 原生体验",
+      featureMacBody: "围绕 macOS 显示器、辅助功能权限和桌面工作流构建。",
+      linksTitle: "快速链接",
+      linksLead: "用于 App Store 审核、帮助和隐私说明的公开页面。",
+      linkSupportTitle: "支持",
+      linkSupportBody: "常见问题、排查信息和联系方式。",
+      linkPrivacyTitle: "隐私政策",
+      linkPrivacyBody: "DockLocker 如何处理权限、设置和本地数据。",
+      updated: "页面更新：2026 年 5 月 21 日",
+      backHome: "返回 DockLocker 首页",
+      supportTitle: "DockLocker 支持",
+      supportIntro: "如果你在使用 DockLocker 时遇到问题，或希望提出改进建议，可以通过这个公开支持页面联系我们。",
+      contactTitle: "联系",
+      contactLine: "邮箱：<a href=\"mailto:huag9998@gmail.com\">huag9998@gmail.com</a>",
+      contactHint: "请附上你的 macOS 版本、DockLocker 版本、显示器配置、Dock 位置，以及复现问题所需的步骤。",
+      supportVisual: "选择一个显示器，然后将 Dock 激活锁定到该目标。",
+      faqTitle: "常见问题",
+      faq1Q: "问：DockLocker 是做什么的？",
+      faq1A: "答：DockLocker 帮助多显示器 Mac 将 Dock 激活行为保持在你选择的显示器上。",
+      faq2Q: "问：为什么 DockLocker 需要辅助功能权限？",
+      faq2A: "答：DockLocker 需要辅助功能权限来监听 Dock 触发边缘附近的光标移动，并检测临时解锁修饰键。详情请查看<a href=\"privacy.html\">隐私政策</a>。",
+      faq3Q: "问：如何临时解锁 Dock？",
+      faq3A: "答：按住设置中配置的临时解锁快捷键即可。默认是 Option。",
+      faq4Q: "问：为什么我的配置上锁定没有生效？",
+      faq4A: "答：请确认已开启辅助功能权限、至少连接了两台显示器、目标显示器仍可用，并且当前显示器排列支持对应 Dock 位置。",
+      faq5Q: "问：DockLocker 会修改系统 Dock 设置吗？",
+      faq5A: "答：不会。DockLocker 会读取 Dock 方向来计算触发边缘，但不会改写你的 Dock 偏好设置。",
+      troubleshootingTitle: "问题排查",
+      trouble1: "打开系统设置，确认 DockLocker 已在“隐私与安全性 > 辅助功能”中启用。",
+      trouble2: "重新连接外接显示器，然后使用应用内刷新或重新检测操作。",
+      trouble3: "确认当前选择的目标显示器仍然连接。",
+      trouble4: "如果临时解锁快捷键与其他应用冲突，可以尝试更换快捷键。",
+      trouble5: "如果 macOS 显示器排列变化没有反映出来，请退出并重新打开 DockLocker。",
+      reportingTitle: "反馈问题",
+      report1: "清楚描述你遇到的问题。",
+      report2: "提供 Mac 机型和 macOS 版本。",
+      report3: "说明显示器排列和 Dock 位置。",
+      report4: "提供 DockLocker 版本和临时解锁快捷键。",
+      report5: "如果截图有助于说明问题，可以一并附上。",
+      privacyTitle: "DockLocker 隐私政策",
+      privacyIntro: "DockLocker 是一款用于控制多显示器 Dock 激活行为的 macOS 工具。本隐私政策说明 DockLocker 如何在你的 Mac 上处理信息。",
+      lastUpdated: "最后更新：2026 年 5 月 21 日",
+      overviewTitle: "概览",
+      dataTitle: "数据收集",
+      noCollect: "DockLocker 不会收集、传输、出售或分享你的个人数据。",
+      accessesTitle: "DockLocker 会访问什么",
+      access1: "<strong>显示器信息</strong>：DockLocker 会读取已连接显示器的名称、标识、尺寸和排列，以便你选择目标显示器。",
+      access2: "<strong>鼠标位置和修饰键</strong>：启用锁定时，DockLocker 会通过 macOS 辅助功能事件访问来检测光标是否靠近 Dock 触发边缘，以及你是否按住临时解锁键。",
+      access3: "<strong>Dock 方向</strong>：DockLocker 会读取本机 macOS Dock 方向设置，用于计算相关触发边缘。",
+      access4: "<strong>应用偏好设置</strong>：目标显示器选择和临时解锁快捷键设置会保存在你的 Mac 本地。",
+      notDoTitle: "DockLocker 不会做什么",
+      notDo1: "不会记录、保存或上传你的鼠标移动历史。",
+      notDo2: "不会捕获屏幕内容、键入文本、文件、窗口或应用内容。",
+      notDo3: "不会使用分析、广告 SDK、跟踪技术、账号或登录。",
+      permissionsTitle: "权限和访问",
+      permissionsBody: "DockLocker 需要 macOS 辅助功能权限，以便在 Dock 锁定启用时监听光标移动和修饰键状态。该权限仅用于提供 Dock 锁定和临时解锁功能。",
+      storageTitle: "本地存储",
+      storageBody: "DockLocker 使用 macOS 偏好设置在本地保存设置。这些设置会保留在你的设备上。",
+      storage1: "<strong>偏好设置</strong>：所选显示器、临时解锁修饰键和相关应用设置",
+      storage2: "<strong>运行状态</strong>：当前锁定状态仅在应用运行时保存在内存中",
+      networkTitle: "网络使用",
+      networkBody: "DockLocker 的 Dock 锁定功能不需要网络访问。如果你点击支持邮箱链接或外部网页，请求会由邮件、浏览器或其他系统应用处理。",
+      retentionTitle: "数据保留",
+      retention1: "你的本地偏好设置会保留在 Mac 上，直到你修改、重置或移除应用数据。",
+      retention2: "运行状态会在应用退出时清除。",
+      retention3: "卸载应用不一定会自动删除所有本地偏好文件。如有需要，你可以手动删除 Mac 上残留的应用数据。",
+      childrenTitle: "儿童隐私",
+      childrenBody: "DockLocker 不会有意收集儿童的个人信息。",
+      changesTitle: "政策变更",
+      changesBody: "我们可能会不时更新本隐私政策。更新会通过页面顶部的“最后更新”日期体现。",
+      privacyContactTitle: "联系",
+      privacyContactBody: "如果你对本隐私政策有疑问，请通过 <a href=\"mailto:huag9998@gmail.com\">huag9998@gmail.com</a> 联系我们。",
+      controlTitle: "你的控制权",
+      controlBody: "由于 DockLocker 在你的 Mac 本地工作：",
+      control1: "你可以选择是否授予辅助功能权限。",
+      control2: "你可以选择何时启用或关闭 Dock 锁定。",
+      control3: "你可以随时移除应用及其本地偏好设置。"
+    }
+  };
+
+  function preferredLanguage() {
+    const params = new URLSearchParams(window.location.search);
+    const queryLang = params.get("lang");
+    if (queryLang && /^zh/i.test(queryLang)) return "zh";
+    if (queryLang && /^en/i.test(queryLang)) return "en";
+
+    const stored = window.localStorage.getItem(STORAGE_KEY);
+    if (stored === "zh" || stored === "en") return stored;
+
+    const navLangs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || "en"];
+    return navLangs.some((lang) => /^zh/i.test(lang)) ? "zh" : "en";
+  }
+
+  function applyLanguage(lang) {
+    const copy = COPY[lang] || COPY.en;
+    document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+    document.querySelectorAll("[data-i18n]").forEach((node) => {
+      const key = node.getAttribute("data-i18n");
+      if (copy[key]) node.textContent = copy[key];
+    });
+    document.querySelectorAll("[data-i18n-html]").forEach((node) => {
+      const key = node.getAttribute("data-i18n-html");
+      if (copy[key]) node.innerHTML = copy[key];
+    });
+    document.querySelectorAll("[data-lang-button]").forEach((button) => {
+      const isActive = button.getAttribute("data-lang-button") === lang;
+      button.classList.toggle("is-active", isActive);
+      button.setAttribute("aria-pressed", String(isActive));
+    });
+    window.localStorage.setItem(STORAGE_KEY, lang);
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const initial = preferredLanguage();
+    applyLanguage(initial);
+    document.querySelectorAll("[data-lang-button]").forEach((button) => {
+      button.addEventListener("click", () => applyLanguage(button.getAttribute("data-lang-button")));
+    });
+  });
+})();

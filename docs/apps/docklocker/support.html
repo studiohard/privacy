@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support - DockLocker</title>
+  <meta name="description" content="DockLocker support, FAQ, and contact information.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="DockLocker">
+        <img src="assets/app-icon.svg" alt="">
+        <span>DockLocker</span>
+      </a>
+      <nav class="nav" aria-label="DockLocker">
+        <a href="index.html" data-i18n="home">Home</a>
+        <a href="support.html" aria-current="page" data-i18n="support">Support</a>
+        <a href="privacy.html" data-i18n="privacy">Privacy</a>
+        <span class="language-toggle" aria-label="Language">
+          <button type="button" data-lang-button="en">EN</button>
+          <button type="button" data-lang-button="zh">中文</button>
+        </span>
+      </nav>
+    </header>
+
+    <main>
+      <section class="doc-hero">
+        <p class="eyebrow" data-i18n="support">Support</p>
+        <h1 data-i18n="supportTitle">DockLocker Support</h1>
+        <p class="lead" data-i18n="supportIntro">If you run into a problem with DockLocker or want to request an improvement, this page is the public support page for the app.</p>
+      </section>
+
+      <section class="section compact">
+        <div class="support-grid">
+          <article class="support-card">
+            <h2 data-i18n="contactTitle">Contact</h2>
+            <p data-i18n-html="contactLine">Email: <a href="mailto:huag9998@gmail.com">huag9998@gmail.com</a></p>
+            <div class="callout" data-i18n="contactHint">Please include your macOS version, DockLocker version, display setup, Dock position, and the steps needed to reproduce the issue.</div>
+          </article>
+          <article class="support-card">
+            <h2 data-i18n="featurePrivacyTitle">Local by design</h2>
+            <p data-i18n="featurePrivacyBody">DockLocker does not collect analytics, accounts, or personal content.</p>
+            <a href="privacy.html" data-i18n="privacyCta">Read privacy policy</a>
+          </article>
+          <article class="support-card mini-demo">
+            <div class="mini-display selected"></div>
+            <div class="mini-display"></div>
+            <p data-i18n="supportVisual">Select one display, then lock Dock activation to that target.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section compact">
+        <div class="doc-panel doc-content">
+          <h2 data-i18n="faqTitle">Frequently Asked Questions</h2>
+          <div class="faq-list">
+            <div class="faq-item">
+              <div class="faq-question" data-i18n="faq1Q">Q: What does DockLocker do?</div>
+              <div class="faq-answer" data-i18n="faq1A">A: DockLocker helps keep Dock activation tied to your chosen display on multi-display Macs.</div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question" data-i18n="faq2Q">Q: Why does DockLocker need Accessibility permission?</div>
+              <div class="faq-answer" data-i18n-html="faq2A">A: DockLocker needs Accessibility permission to monitor cursor movement near Dock trigger edges and detect the temporary unlock modifier key. See the <a href="privacy.html">Privacy Policy</a> for details.</div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question" data-i18n="faq3Q">Q: How do I temporarily unlock the Dock?</div>
+              <div class="faq-answer" data-i18n="faq3A">A: Hold the temporary unlock shortcut configured in Settings. The default is Option.</div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question" data-i18n="faq4Q">Q: Why does locking not work on my setup?</div>
+              <div class="faq-answer" data-i18n="faq4A">A: Check that Accessibility permission is enabled, at least two displays are connected, the target display is available, and the Dock position is supported by your current display arrangement.</div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question" data-i18n="faq5Q">Q: Does DockLocker change my system Dock settings?</div>
+              <div class="faq-answer" data-i18n="faq5A">A: No. DockLocker reads the Dock orientation to calculate trigger edges, but it does not rewrite your Dock preferences.</div>
+            </div>
+          </div>
+
+          <h2 data-i18n="troubleshootingTitle">Troubleshooting</h2>
+          <ol>
+            <li data-i18n="trouble1">Open System Settings and confirm DockLocker is enabled under Privacy & Security > Accessibility.</li>
+            <li data-i18n="trouble2">Reconnect external displays, then use the app's refresh or recheck action.</li>
+            <li data-i18n="trouble3">Confirm the selected target display is still connected.</li>
+            <li data-i18n="trouble4">Try changing the temporary unlock shortcut if it conflicts with another app.</li>
+            <li data-i18n="trouble5">Quit and reopen DockLocker if macOS display arrangement changes are not reflected.</li>
+          </ol>
+
+          <h2 data-i18n="reportingTitle">Reporting Issues</h2>
+          <ol>
+            <li data-i18n="report1">Describe the problem clearly.</li>
+            <li data-i18n="report2">Include your Mac model and macOS version.</li>
+            <li data-i18n="report3">List your display arrangement and Dock position.</li>
+            <li data-i18n="report4">Include your DockLocker version and temporary unlock shortcut.</li>
+            <li data-i18n="report5">Attach a screenshot if it helps explain the problem.</li>
+          </ol>
+
+          <p><a href="index.html" data-i18n="backHome">Back to DockLocker home</a></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>DockLocker Support</span>
+      <span data-i18n="updated">Page updated: May 21, 2026</span>
+    </footer>
+  </div>
+  <script src="locale.js"></script>
+</body>
+</html>

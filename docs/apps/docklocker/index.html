@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DockLocker - Keep the Dock on the display you choose</title>
+  <meta name="description" content="DockLocker is a macOS utility that locks Dock activation to your selected display and keeps multi-display workflows predictable.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="DockLocker">
+        <img src="assets/app-icon.svg" alt="">
+        <span>DockLocker</span>
+      </a>
+      <nav class="nav" aria-label="DockLocker">
+        <a href="index.html" aria-current="page" data-i18n="home">Home</a>
+        <a href="support.html" data-i18n="support">Support</a>
+        <a href="privacy.html" data-i18n="privacy">Privacy</a>
+        <span class="language-toggle" aria-label="Language">
+          <button type="button" data-lang-button="en">EN</button>
+          <button type="button" data-lang-button="zh">中文</button>
+        </span>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="heroEyebrow">Dock control for multi-display Macs</p>
+          <h1 data-i18n="heroTitle">Keep the Dock on the display you choose.</h1>
+          <p class="lead" data-i18n="heroLead">DockLocker helps prevent accidental Dock activation on secondary displays by guiding the cursor away from non-target Dock trigger edges.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="support.html" data-i18n="supportCta">Get support</a>
+            <a class="button" href="privacy.html" data-i18n="privacyCta">Read privacy policy</a>
+          </div>
+        </div>
+        <div class="dock-demo" aria-hidden="true">
+          <div class="window-bar">
+            <span></span><span></span><span></span>
+            <strong>DockLocker</strong>
+          </div>
+          <div class="status-strip">
+            <div class="lock-mark">⌘</div>
+            <div>
+              <strong data-i18n="demoStatusTitle">Dock locked</strong>
+              <p data-i18n="demoStatusBody">Temporary unlock: Option</p>
+            </div>
+          </div>
+          <div class="display-row">
+            <div class="display-card selected">
+              <div class="screen laptop"></div>
+              <strong data-i18n="demoBuiltIn">Built-in Display</strong>
+            </div>
+            <div class="display-card">
+              <div class="screen monitor"></div>
+              <strong data-i18n="demoExternal">External Display</strong>
+            </div>
+          </div>
+          <div class="dock-button" data-i18n="demoButton">Lock Dock</div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <h2 data-i18n="featureTitle">Designed for predictable desktop focus</h2>
+          <p data-i18n="featureLead">DockLocker focuses on one job: keeping Dock activation tied to the display that should own your Dock.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="card">
+            <span class="marker">01</span>
+            <h3 data-i18n="featureTargetTitle">Target display</h3>
+            <p data-i18n="featureTargetBody">Choose the display where the Dock should remain available.</p>
+          </article>
+          <article class="card">
+            <span class="marker">02</span>
+            <h3 data-i18n="featureGuardTitle">Mouse guard</h3>
+            <p data-i18n="featureGuardBody">When locked, DockLocker watches Dock trigger edges and nudges accidental activation away from other displays.</p>
+          </article>
+          <article class="card">
+            <span class="marker">03</span>
+            <h3 data-i18n="featureShortcutTitle">Temporary unlock</h3>
+            <p data-i18n="featureShortcutBody">Hold your chosen modifier key when you intentionally need the Dock on another display.</p>
+          </article>
+          <article class="card">
+            <span class="marker">04</span>
+            <h3 data-i18n="featureMenuTitle">Menu bar access</h3>
+            <p data-i18n="featureMenuBody">Check status, lock or unlock, and reopen the main window from the menu bar.</p>
+          </article>
+          <article class="card">
+            <span class="marker">05</span>
+            <h3 data-i18n="featurePrivacyTitle">Local by design</h3>
+            <p data-i18n="featurePrivacyBody">DockLocker does not collect analytics, accounts, or personal content.</p>
+          </article>
+          <article class="card">
+            <span class="marker">06</span>
+            <h3 data-i18n="featureMacTitle">macOS native</h3>
+            <p data-i18n="featureMacBody">Built around macOS displays, Accessibility permission, and desktop workflows.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section compact">
+        <div class="section-header">
+          <h2 data-i18n="linksTitle">Quick links</h2>
+          <p data-i18n="linksLead">Public pages for App Store review, help, and privacy details.</p>
+        </div>
+        <div class="link-grid">
+          <a class="card link-card" href="support.html">
+            <span>
+              <h3 data-i18n="linkSupportTitle">Support</h3>
+              <p data-i18n="linkSupportBody">FAQ, troubleshooting details, and contact information.</p>
+            </span>
+          </a>
+          <a class="card link-card" href="privacy.html">
+            <span>
+              <h3 data-i18n="linkPrivacyTitle">Privacy Policy</h3>
+              <p data-i18n="linkPrivacyBody">How DockLocker handles permissions, settings, and local data.</p>
+            </span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>DockLocker</span>
+      <span data-i18n="updated">Page updated: May 21, 2026</span>
+    </footer>
+  </div>
+  <script src="locale.js"></script>
+</body>
+</html>
