@@ -62,7 +62,7 @@
             </div>
             <div class="faq-item">
               <div class="faq-question" data-i18n="faq2Q">Q: Why does DockLocker need Accessibility permission?</div>
-              <div class="faq-answer" data-i18n-html="faq2A">A: DockLocker needs Accessibility permission to monitor cursor movement near Dock trigger edges and detect the temporary unlock modifier key. See the <a href="privacy.html">Privacy Policy</a> for details.</div>
+              <div class="faq-answer" data-i18n-html="faq2A">A: DockLocker needs Accessibility permission only when Dock locking is enabled. It processes mouse movement near display-edge Dock trigger zones and detects the temporary unlock modifier key. See the <a href="privacy.html">Privacy Policy</a> for details.</div>
             </div>
             <div class="faq-item">
               <div class="faq-question" data-i18n="faq3Q">Q: How do I temporarily unlock the Dock?</div>
@@ -74,7 +74,7 @@
             </div>
             <div class="faq-item">
               <div class="faq-question" data-i18n="faq5Q">Q: Does DockLocker change my system Dock settings?</div>
-              <div class="faq-answer" data-i18n="faq5A">A: No. DockLocker reads the Dock orientation to calculate trigger edges, but it does not rewrite your Dock preferences.</div>
+              <div class="faq-answer" data-i18n="faq5A">A: Dock locking reads your Dock orientation and display setup without changing them. If you use Hide Dock or Show Dock, DockLocker asks macOS System Events to toggle the Dock auto-hide setting, and you can change it back at any time.</div>
             </div>
           </div>
 
@@ -103,7 +103,7 @@
 
     <footer class="footer">
       <span>DockLocker Support</span>
-      <span data-i18n="updated">Page updated: May 21, 2026</span>
+      <span data-i18n="updated">Page updated: June 25, 2026</span>
     </footer>
   </div>
   <script src="locale.js"></script>

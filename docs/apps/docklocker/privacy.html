@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy - DockLocker</title>
-  <meta name="description" content="DockLocker privacy policy and local data handling details.">
+  <meta name="description" content="DockLocker privacy policy, permissions, and local data handling details.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -29,15 +29,15 @@
       <section class="doc-hero">
         <p class="eyebrow" data-i18n="privacy">Privacy</p>
         <h1 data-i18n="privacyTitle">DockLocker Privacy Policy</h1>
-        <p class="lead" data-i18n="privacyIntro">DockLocker is a macOS utility for controlling Dock activation across multiple displays. This privacy policy explains how DockLocker handles information on your Mac.</p>
+        <p class="lead" data-i18n="privacyIntro">DockLocker is a macOS utility for preventing accidental Dock movement on multi-display Macs. This privacy policy explains how DockLocker handles permissions, settings, and local information on your Mac.</p>
       </section>
 
       <section class="section compact">
         <article class="doc-panel doc-content">
-          <p><strong data-i18n="lastUpdated">Last Updated: May 21, 2026</strong></p>
+          <p><strong data-i18n="lastUpdated">Last Updated: June 25, 2026</strong></p>
 
           <h2 data-i18n="overviewTitle">Overview</h2>
-          <p data-i18n="privacyIntro">DockLocker is a macOS utility for controlling Dock activation across multiple displays. This privacy policy explains how DockLocker handles information on your Mac.</p>
+          <p data-i18n="privacyIntro">DockLocker is a macOS utility for preventing accidental Dock movement on multi-display Macs. This privacy policy explains how DockLocker handles permissions, settings, and local information on your Mac.</p>
 
           <h2 data-i18n="dataTitle">Data Collection</h2>
           <div class="callout" data-i18n="noCollect">DockLocker does NOT collect, transmit, sell, or share your personal data.</div>
@@ -45,20 +45,23 @@
           <h3 data-i18n="accessesTitle">What DockLocker Accesses</h3>
           <ul>
             <li data-i18n-html="access1"><strong>Display information</strong>: DockLocker reads connected display names, identifiers, sizes, and arrangement so you can choose a target display.</li>
-            <li data-i18n-html="access2"><strong>Mouse position and modifier keys</strong>: While locking is enabled, DockLocker uses macOS Accessibility event access to detect cursor movement near Dock trigger edges and whether your temporary unlock key is held.</li>
-            <li data-i18n-html="access3"><strong>Dock orientation</strong>: DockLocker reads the local macOS Dock orientation setting so it can calculate the relevant trigger edge.</li>
-            <li data-i18n-html="access4"><strong>App preferences</strong>: Target display selection and temporary unlock shortcut settings are stored locally on your Mac.</li>
+            <li data-i18n-html="access2"><strong>Mouse movement near display edges</strong>: When Pin Dock or Prevent Dock Pop-Up is enabled, DockLocker uses macOS Accessibility event access to process mouseMoved events near Dock trigger edges and check whether your temporary unlock modifier key is held.</li>
+            <li data-i18n-html="access3"><strong>Dock and Spaces preferences</strong>: DockLocker reads local macOS Dock orientation and separate-Spaces settings so it can calculate supported trigger edges and show accurate setup guidance.</li>
+            <li data-i18n-html="access4"><strong>App preferences</strong>: Target display selection, lock status, and temporary unlock shortcut settings are stored locally on your Mac.</li>
+            <li data-i18n-html="access5"><strong>Dock auto-hide setting</strong>: If you use Hide Dock or Show Dock, DockLocker asks macOS System Events to toggle the Dock auto-hide setting. This action stays on your Mac and can be changed back by you at any time.</li>
           </ul>
 
           <h3 data-i18n="notDoTitle">What DockLocker Does Not Do</h3>
           <ul>
             <li data-i18n="notDo1">It does not record, store, or upload your mouse movement history.</li>
             <li data-i18n="notDo2">It does not capture screen contents, keystroke text, files, windows, or app content.</li>
-            <li data-i18n="notDo3">It does not use analytics, advertising SDKs, tracking technologies, accounts, or sign-in.</li>
+            <li data-i18n="notDo3">It does not monitor keyboard events for text entry, passwords, or app usage.</li>
+            <li data-i18n="notDo4">It does not use analytics, advertising SDKs, tracking technologies, accounts, or sign-in.</li>
           </ul>
 
           <h2 data-i18n="permissionsTitle">Permissions and Access</h2>
-          <p data-i18n="permissionsBody">DockLocker needs macOS Accessibility permission to monitor cursor movement and modifier key state while the Dock lock is active. This permission is used only to provide Dock locking and temporary unlock behavior.</p>
+          <p data-i18n="permissionsBody">DockLocker requests macOS Accessibility permission only when a feature needs it. For Dock locking, the permission is used to process mouseMoved events near display-edge Dock trigger zones and to allow your temporary unlock modifier. DockLocker does not use Accessibility permission to read keyboard input, screen contents, files, or personal data.</p>
+          <p data-i18n="automationBody">DockLocker may also request macOS Automation permission for System Events if you use Hide Dock or Show Dock. This is used only to toggle the Dock auto-hide preference through macOS, not to control other apps or read their content.</p>
 
           <h2 data-i18n="storageTitle">Local Storage</h2>
           <p data-i18n="storageBody">DockLocker stores settings locally using macOS preferences. These settings remain on your device.</p>
@@ -101,7 +104,7 @@
 
     <footer class="footer">
       <span>DockLocker</span>
-      <span data-i18n="updated">Page updated: May 21, 2026</span>
+      <span data-i18n="updated">Page updated: June 25, 2026</span>
     </footer>
   </div>
   <script src="locale.js"></script>
